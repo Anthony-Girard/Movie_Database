@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
+
+		<title>Movie Database</title>
+
+		<!-- Bootstrap -->
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+		<!-- Icons -->
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+		<!-- Fonts -->
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+		<!-- Custom styles -->
+		<link rel="stylesheet" href="../static/assets/css/styles.css">
+
+		<!--[if lt IE 9]> <script src="assets/js/html5shiv.js"></script> <![endif]-->
+	</head>
+	<body class="home">
+
+		<header id="header">
+		<div id="head" class="parallax" parallax-speed="2">
+			<h1 id="logo" class="text-center">
+				<span class="title" style="font-size:190%; font-weight:bold">Movie Database</span>
+						<span class="tagline" style="font-size:90%"><b>Movies</b>
+			</h1>
+		</div>
+
+		<nav class="navbar navbar-default navbar-sticky">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+				</div>
+
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="/movies">Movies</a></li>
+						<li><a href="people">People</a></li>
+						<li><a href="reviews">Reviews</a></li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</nav>
+
+		</header>
+
+		<div class="container">
+		<form class = "form-searchByTitle">
+			<h4>Search by Movie Title:</h4>
+			<div class="form-group">
+				<input type="name" name="movieTitle" id="title" class="form-control" placeholder="Enter Title (i.e. Aquaman)" required />
+			</div>
+			<div class="form-group">
+			  <button id="searchByTitle" type="button" class="btn btn-info">Search</button>
+			</div>
+		</form>
+		
+		<div id="titleHeader"></div>
+		<div id="MoviesByTitle"></div>
+
+		<form class = "form-searchYear">
+			<h4>Search by Release Year:</h4>
+			<div class="form-group">
+				<input type="name" name="year" id="title" class="form-control" placeholder="Enter Year (i.e. 1998)" required autofocus />
+			</div>
+			<div class="form-group">
+			  <button id="searchByYear" type="button" class="btn btn-info">Search</button>
+			</div>
+		</form>
+
+		<div id="yearHeader"></div>
+		<div id="MoviesByYear"></div>
+
+		<form>
+			<div class="form-group">
+			<h4>Search by Duration:</h4>
+			  <input type="name" name="minDuration" id="minDuration" class="form-control" placeholder="Minimum Duration in minutes(i.e. 105)" required autofocus/>
+			</div>
+			<div class="form-group">
+			  <input type="name" name="maxDuration" id="maxDuration" class="form-control" placeholder="Maximum Duration in minutes (i.e. 105)" required autofocus>
+			</div>
+			<button id="searchDuration" type="button" class="btn btn-info">Search</button>
+		</form>
+
+		<div id="durationHeader"></div>
+		<div id="MoviesByDuration"></div>
+
+		<form class = "form-searchMultiple">
+			<div class = "form-group">
+				<br></br>
+				<button id="searchMultiple" type="button" class="btn btn-info">Search All</button>
+			</div>
+		</form>
+
+		<div id="multipleHeader"></div>
+		<div id="MoviesByMultiple"></div>
+
+		</div>
+
+		<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+		<script src="../static/js/movies.js"></script>
+
+	</body>
+</html>
